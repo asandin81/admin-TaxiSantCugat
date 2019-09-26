@@ -1,0 +1,15 @@
+RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
+RewriteRule .* ? [F,L]
+
+<IfModule mod_rewrite.c>
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://taxisantcugat.cat/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www.taxisantcugat.cat [NC]
+RewriteRule ^(.*)$ https://taxisantcugat.cat/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^91.121.74.27 [NC]
+RewriteRule ^(.*)$ https://taxisantcugat.cat/$1 [R=301,L]
+</IfModule>
+
+ErrorDocument 404 /error404.html
