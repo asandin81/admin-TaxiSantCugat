@@ -1,28 +1,46 @@
-<div class="formArea">
-          <div class="campo">
-            <label>Fecha:</label>
-            <input class="form-field" type="date" name="Fecha" required="">
+
+<div class="formArea text-left">
+          <div class="campo container">
+            <label class="col-md-2">Fecha:</label>
+            <input class="form-field col-md-3" type="date" name="Fecha" required="">
+            
+            <label class="col-md-2">Hora:</label>
+            <input class="form-field col-md-3" type="time" name="Hora" required="">
             
           </div>
-          <div class="campo">
-            <label>Hora:</label>
-            <input class="form-field" type="time" name="Hora" required="">
-            
-          </div>
-          <div class="campoGrande">
-            <label>Origen:</label>
-            <select id="selectorOrigen" name="Origen" onchange="habilitar(this.value);" required="">
+          <div class="campoGrande container">
+            <label class="col-md-2">Origen:</label>
+            <select class="col-md-3" id="selectorOrigen" name="Origen" onchange="habilitar(this.value);" required="">
               <option selected="true" disabled="disabled">Seleccionar</option>
               <option value="Sant Cugat del Valles">Sant Cugat del Valles</option>
               <option value="Mirasol">Mirasol - Sant Cugat</option>
               <option value="Valldoreix">Valldoreix - Sant Cugat</option>
               <option value="La Floresta">La Floresta - Sant Cugat</option>
-        <option value="Les Planes">Les Planes - Sant Cugat</option>
+			  <option value="Les Planes">Les Planes - Sant Cugat</option>
               <option value="Aeropuerto">Aeropuerto Barcelona</option>
               <option value="Aeropuerto Girona">Aeropuerto Girona</option>
               <option value="Aeropuerto Reus">Aeropuerto Reus</option>
               <option value="Estacion de Sants">Estacion de Sants</option>
               <option value="Barcelona">Barcelona Ciudad</option>
+              <option value="Bellaterra">Bellaterra</option>
+              <option value="Cerdanyola del Valles">Cerdanyola del Valles</option>
+              <option value="Les Fonts, Sant Quirze">Les Fonts, Sant Quirze</option>
+              <option value="Otros">Otros</option>
+            </select>
+            
+            <label class="col-md-2">Destino:</label>
+            <select class="col-md-3" name="Destino" required="">
+              <option selected="true" disabled="disabled">Seleccionar</option>
+              <option value="Aeropuerto">Aeropuerto Barcelona</option>
+              <option value="Aeropuerto Girona">Aeropuerto Girona</option>
+              <option value="Aeropuerto Reus">Aeropuerto Reus</option>
+              <option value="Estacion de Sants">Estacion de Sants</option>
+              <option value="Barcelona">Barcelona Ciudad</option>
+              <option value="Sant Cugat del Valles">Sant Cugat del Valles</option>
+              <option value="Mirasol">Mirasol - Sant Cugat</option>
+              <option value="Valldoreix">Valldoreix - Sant Cugat</option>
+              <option value="La Floresta">La Floresta - Sant Cugat</option>
+			  <option value="Les Planes">Les Planes - Sant Cugat</option>
               <option value="Bellaterra">Bellaterra</option>
               <option value="Cerdanyola del Valles">Cerdanyola del Valles</option>
               <option value="Les Fonts, Sant Quirze">Les Fonts, Sant Quirze</option>
@@ -31,43 +49,21 @@
             
           </div>
           <div id="vueloTren" class="campoGrande" style="display: none">
-            <label>Nº de Vuelo/Tren:</label>
-            <input class="form-field" type="text" name="vueloTren">
+            <label class="col-md-2">Nº de Vuelo/Tren:</label>
+            <input class="form-field col-md-3" type="text" name="vueloTren">
           </div>
           
             <div id="calle" class="campo" style="display: none">
-              <label>Calle:</label>
-              <input class="form-field" type="text" name="Direccion">
+              <label class="col-md-2">Calle:</label>
+              <input class="form-field col-md-3" type="text" name="Direccion">
               
-            </div>
-            <div id="cp" class="campo" style="display: none"> 
-              <label>CP:</label>
-              <input class="form-field" type="text" name="cp">
+         
+              <label class="col-md-2">CP:</label>
+              <input class="form-field col-md-3" type="text" name="cp">
                 
             </div>
           
-          <div class="campo">
-            <label>Destino:</label>
-            <select name="Destino" required="">
-              <option selected="true" disabled="disabled">Seleccionar</option>
-              <option value="Aeropuerto">Aeropuerto Barcelona</option>
-              <option value="Aeropuerto Girona">Aeropuerto Girona</option>
-              <option value="Aeropuerto Reus">Aeropuerto Reus</option>
-              <option value="Estacion de Sants">Estacion de Sants</option>
-              <option value="Barcelona">Barcelona Ciudad</option>
-              <option value="Sant Cugat del Valles">Sant Cugat del Valles</option>
-              <option value="Mirasol">Mirasol - Sant Cugat</option>
-              <option value="Valldoreix">Valldoreix - Sant Cugat</option>
-              <option value="La Floresta">La Floresta - Sant Cugat</option>
-        <option value="Les Planes">Les Planes - Sant Cugat</option>
-              <option value="Bellaterra">Bellaterra</option>
-              <option value="Cerdanyola del Valles">Cerdanyola del Valles</option>
-              <option value="Les Fonts, Sant Quirze">Les Fonts, Sant Quirze</option>
-              <option value="Otros">Otros</option>
-            </select>
-            
-          </div>
-          <div class="campoPequeño">
+          <div class="campoPequeño col-md-4">
             <label>Pasajeros:</label>
             <select name="Pasajeros" required="">
               <option value="1">1</option>
@@ -79,7 +75,7 @@
             </select>
             
           </div>
-          <div class="campoPequño">
+          <div class="campoPequño col-md-4">
             <label>Equipaje:</label>
             <input class="form-field" type="text" name="Equipaje" size="10">
             
@@ -89,7 +85,7 @@
             <textarea class="form-field" name="Observaciones" placeholder="Si necesita sillita de bebe, hay que recoger a otra persona, etc..."></textarea>
             
           </div>
-           <div class="campo">
+           <div class="campo col-md-4">
             <label>Necesita que le recojamos a la vuelta:</label>
             <select name="Recogida" onchange="recogida(this.value);">
               <option selected="true" disabled="disabled">Seleccionar</option>

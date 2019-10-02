@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$('document').ready(function() {
 	var user = JSON.parse(obtenerParametros());
 	console.log(user.nombre);
 	$('#subtitulo').text('Hola '+user.nombre+' '+user.apellidos+' bienvenido a tu area personal.' );
